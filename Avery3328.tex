@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+
+
+\setlength{\topmargin}{0.25in}
+\setlength{\hoffset}{-36pt}
+\setlength{\voffset}{0pt}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\textwidth}{7.6in}
+\setlength{\textheight}{9in}
+\setlength{\tabcolsep}{0pt}
+
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{fontspec}
+\setmainfont{Apple Chancery}
+
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 1pt
+    \futurelet \reserved@a \@xhline
+}
+\makeatother
+
+\newcolumntype{[}{@{\vrule width 1pt\hspace{6pt}}} 
+\newcolumntype{]}{@{\hspace{6pt}\vrule width 1pt}} 
+\newcolumntype{!}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+
+\newcommand{\that}[1]{
+\begin{tabular}{@{\hspace{7pt}}>{\Centering}m{3.3125in}@{\hspace{7pt}}} 
+\parbox[c][2in][c]{3in}{\centering} \\
+\parbox[c][2in][c]{3in}{\centering \LARGE #1} \\ 
+\end{tabular}
+}
+
+\begin{document}\raggedright 
+\pagestyle{empty}
+\that{Hello}
+\hspace{23pt}
+\that{World}
+\\[31.5pt]
+\that{Hello}
+\hspace{23pt}
+\that{World}
+\newpage
+\end{document}
+
